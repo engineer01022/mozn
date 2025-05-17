@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>test1</title>
+  <meta name="author" content="Velile Vamba">
+  <meta content="" name="lorem100">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  
+
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Lato:400,300,700,900" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/free.min.css">
+<link rel="stylesheet" href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/brand.min.css">
+<link rel="stylesheet" href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/flag.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    <title>Document</title>
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/test1.css" rel="stylesheet">
+  <style type="text/css">
+    .carousel-item {
+      height: 60vh;
+      min-height: 350px;
+      background: no-repeat center center scroll;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+  
+    .main {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  .main .wrap {
+  margin: 2rem;
+  
+  transform-style: preserve-3d;
+  transform: perspective(100rem);
+  
+  cursor: pointer;
+  }
+  
+  .main .container {
+  --rX: 0;
+  --rY: 0;
+  --bX: 50%;
+  --bY: 80%;
+  
+  
+  border: 1px solid var(--background-color);
+  border-radius: 1.6rem;
+  padding: 4rem;
+  
+  display: flex;
+  align-items: flex-end;
+  
+  position: relative;
+  transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+  
+  background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(32, 57, 84));
+  background-position: var(--bX) var(--bY);
+  background-size: 40rem auto;
+  box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%);
+  
+  transition: transform .6s 1s;
+  }
+  
+  .main .container::before,
+  .main .container::after {
+  content: "";
+  
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #fff;
+  
+  position: absolute;
+  z-index: 2;
+  
+  opacity: .6;
+  transition: .3s;
+  }
+  
+  .main .container::before {
+  top: 2rem;
+  right: 2rem;
+  
+  border-bottom-width: 0;
+  border-left-width: 0;
+  }
+  
+  .main .container::after {
+  bottom: 2rem;
+  left: 2rem;
+  
+  border-top-width: 0;
+  border-right-width: 0;
+  }
+  
+  .main .container--active {
+  transition: none;
+  }
+  
+  .main .container--2 {
+  filter: hue-rotate(80deg) saturate(140%);
+  }
+  
+  .main .container--3 {
+  filter: hue-rotate(160deg) saturate(140%);
+  }
+  
+  .main .container p {
+  color: hsla(0, 0%, 100%, .6);
+  font-size: 0.8rem;
+  text-align: left;
+  }
+  
+  .main .wrap:hover .container::before,
+  .main .wrap:hover .container::after {
+  width: calc(100% - 4rem);
+  height: calc(100% - 4rem);
+  }
+  
+  .main .abs-site-link {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  color: hsla(0, 0%, 0%);
+  font-size: 1.6rem;
+  } 
+  .serv{
+  border: 1px solid var(--background-color);
+  padding: 4rem;
+  
+  display: flex;
+  align-items: flex-end;
+  
+  position: relative;
+  transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+  
+  background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(32, 57, 84));
+  background-position: var(--bX) var(--bY);
+  background-size: 40rem auto;
+  
+  transition: transform .6s 1s;
+  }
+  
+  
+  /*****************************************/
+  .solutions {
+  /* The image used */
+  background-image: url(assets/img/slider-2.jpg);
+  
+  /* Set a specific height */
+  min-height: 500px;
+  
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  
+  .solutions .wrapper{
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+  }
+  
+  .solutions h1{
+  color: #fff;
+  font-weight: normal;
+  text-align: center;
+  font-size: 48px;
+  }
+  
+  .solutions .panels{
+  list-style-type: none;
+  padding: 0;
+  }
+  
+  .solutions .panels li{
+  
+  margin: 0;
+  display: block;
+  box-sizing: border-box;
+  float: left;
+  }
+  
+  .solutions .panels li div{
+  padding: 10% 0;
+  text-align: center;
+  color: #fff;
+  font-size: 11px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  height: 50vh;
+  }
+  
+  /*// ANIMATION STYLES //*/
+  
+  .solutions .panels div.back {
+  transform: rotateY(90deg);
+  }
+  
+  .solutions .panels div.front {
+  position: absolute;
+  }
+  
+  .solutions .panels li:hover div.front {
+  animation: twirl 0.2s ease-in forwards;
+  }
+  .solutions .panels li:hover div.back {
+  animation: twirl 0.2s 0.2s ease-out forwards reverse;
+  }
+  
+  @keyframes twirl {
+  0%{ transform: rotateY(0deg)}
+  100% {transform: rotateY(90deg)}
+  }
+  
+  
+  .why{
+    /* The image used */
+    background-image: url(about-us.webp);
+  background-size: cover;
+  /* Set a specific height */
+  min-height: 350px;
+  margin: 0px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  .contac{
+  
+  padding: 4rem;
+  max-width: 100%;
+  
+
+  position: relative;
+  
+  background-position: var(--bX) var(--bY);
+  background-size:auto;
+  
+  
+  }
+  </style>
+  </head>
+  <body>
+
+            <!-- the header part beginning-->
+
+    <header id="header" class="fixed-top">
+        <div class="container">
+    
+          <div class="logo float-left">
+            
+            <!-- the nav part -->
+            <a href="/"><img src="photos/mozon.png" alt="" ></a>
+          </div>
+    <nav class="nav-menu float-right d-none d-lg-block">
+      <ul>
+        <li class="active"><a href="#header">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Our Services</a></li>
+        <li><a href="#faq">Solutions</a></li>
+          <li><a href="#team">Our Clients</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+          
+    </nav>
+
+
+        </div>
+        </header>            <!-- the header part end-->
+
+          <!-- ======= Hero Section ======= -->
+  <section >
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <!-- Slide One - Set the background image for this slide in the line below -->
+        <div class="carousel-item active" style="background-image: url(about-us.webg)">
+          <div class="carousel-caption">
+            <h2 class="display-4">Our-Compnay</h2>
+            <p class="lead">Delivering relevant, agile yet simple technological solutions for financial services providers</p>
+          </div>
+        </div>
+        <!-- Slide Two - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url(HOME2.jpg)">
+          <div class="carousel-caption ">
+            <h2 class="display-4">Our-Compnay</h2>
+            <p class="lead">Delivering relevant technologies for our times</p>
+          </div>
+        </div>
+        <!-- Slide Three - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url(HOME4.jpg)">
+          <div class="carousel-caption covid-block">
+            <h2 class="display-4">We are in this together.</h2>
+            <p class="lead" style="background: rgba(0, 0, 0, 0.7); border-radius: 3px;">Our Organisation is committed on taking recommendations from the health authorities,
+               WHO (World Health Organisation) and our local authority. Our company is committed to follow
+              the guidelines which includes, refraining from non-essential travelling, self-isolation upon return
+              from any affected areas, social distancing, wearing of musk’s and use of hand sanitizer.</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+    </div>
+  </section><!-- #hero -->
+  <main class="main">
+     <!-- ======= About Us Section ======= -->
+     <section id="about" class="about">
+      <div style="padding-right: 3rem;padding-left: 3rem;">
+
+        <div >
+          <h2>About Us</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2">
+            <img src="about-us.webp" class="img-fluid1 " alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1">
+            <p class="">
+                  MOZON Technology is a leading provider of ICT solutions in Saudi Arabia, serving
+              clients across the Kingdom. The company has accumulated extensive industry
+              experience over the years, positioning it as a contributor to shaping future technology
+              standards in the region .           </p>
+            <p>
+              Staffed by a team of experienced and qualified ICT professionals, MOZON delivers
+customized services and solutions tailored to the unique requirements of its clients,
+catering to organizations of all sizes across various sectors, including the corporate,
+public, and education verticals, and demonstrating its ability to understand and
+address the specific needs of diverse organizations. Committed to building long
+-term partnerships, MOZON collaborates with renowned international partners to
+provide comprehensive and innovative solutions to its customers, underpinned by
+core values of trust, integrity, and teamwork, with the company's growth and success
+reflecting its unwavering focus on customer satisfaction and the delivery of
+exceptional service quality.
+            </p>
+            
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section id="services" class="services section-bg">
+      <div style="padding-left: 4rem;padding-right: 4rem;">
+
+        <div class="section-title">
+          <h2>Our Work</h2>
+          <p>Our mission is to design, build, and deliver uncompromised IT solutions and support
+            to meet each client’s unique needs.
+            We specialize in the design, construction, delivery, and support of best-of-breed
+            costeffective IT technology solutions that integrate seamlessly and enable businesses
+            to make the most of their existing and planned infrastructure and technology
+            investments.</p>
+        </div>
+
+        
+          
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+      <!-- ======= Call To Action Section ======= -->
+      <section class="call-to-action">
+        <div class="serv">
+          
+          <div class="text-center" >
+            
+          <div class="section-title" >
+            <h2 >Our Services</h2>
+          </div>
+  
+            <h2>ICT SOLUTIONS AND SERVICES</h2>  
+        <!-- begin of service 1 -->
+<br><br><br>
+            <div class="">
+
+             
+      
+              <div class="row">
+                <div class="col-lg-6 order-1 order-lg-2">
+                  <img src="camera.jpg" class="img-fluid " alt="" style="width:20rem;">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1">
+                  <h3>CCTV Solutions</h3>
+                  <p class="">
+                    As your trusted ICT partner, MOZON offers Hikvision's industry -leading video surveillance
+                    products to meet all your security needs.
+                    From hybrid DVRs and NVRs to IP cameras and speed domes, Hikvision's comprehensive
+                    portfolio provides unparalleled flexibility and performance for analog, digital, or hybrid
+                    video deployments. Trust MOZON to design, implement, and maintain a tailored Hikvision
+                    surveillance system that elevates your security, deters criminal activity, and gives you complete
+                    peace of mind           </p>
+    
+                </div>
+              </div>
+      
+            </div>
+            <br>
+      <!-- end of service 1 -->
+<!-- begin of service 2 -->
+
+<div >
+  
+  <div class="row">
+    <div class="col-lg-6 order-1 order-lg-2">
+      <img src="intercom1" class="img-fluid  " alt="">
+    </div>
+    <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1">
+      <h3>Video INTERCOM</h3>
+      <p class="">
+        Enhance security and communication at your facility with MOZON's Hikvision video intercom
+solutions. Hikvision's diverse product portfolio offers flexible IP, analog, and 2 -wire systems
+to seamlessly integrate with your unique requirements. Trust MOZON to design and deploy
+a high -performance Hikvision video intercom system that elevates access control, visitor
+management, and tenant -to -visitor communications at your residential, commercial, or
+industrial site.        </p>
+
+    </div>
+  </div>
+
+</div>
+<br>
+<!-- end of service 2 -->
+<!-- begin of service 3 -->
+
+<div >
+
+  
+  <div class="row">
+    <div class="col-lg-6 order-1 order-lg-2">
+      <img src="ajax3.jpeg" class="img-fluid  " alt="">
+    </div>
+    <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1">
+      <h3>SECURITY SYSTEMS</h3>
+      <p class="">
+        MOZON is proud to offer advanced security solutions from Ajax Systems, the leading security
+        systems manufacturer in Europe. we provide access to Ajax's comprehensive suite of smart
+        home security products, including a wide range of reliable intrusion, fire, and leak detectors.
+        With cutting-edge hardware, intuitive software, and modern aesthetics, the Ajax security
+        system from MOZON delivers unparalleled protection and customization to keep your
+        home or business safe.        </p>
+
+    </div>
+  </div>
+
+</div>
+<br>
+<!-- end of service 3 -->
+
+<!-- begin of service 4 -->
+
+<div >
+  
+  <div class="row">
+    <div class="col-lg-6 order-1 order-lg-2">
+      <img src="ip-com.jpeg" class="img-fluid  " alt="">
+    </div>
+    <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1">
+      <h3>IP-COM COMMERICAL NETWORKING</h3>
+      <p class="">
+        Equip your business with the networking power of IPCOM from MOZON. As a global leader
+        in commercial networking solutions, IP-COM delivers high-speed, secure, and user-friendly
+        connectivity to enterprises of all sizes. Leveraging cutting-edge technology, IPCOM's innovative
+        devices seamlessly unite your workforce, optimize workflows, and keep your business
+        competitive in the digital age.        </p>
+
+    </div>
+  </div>
+
+</div>
+<br>
+<!-- end of service 4 -->
+
+<!-- begin of service 5 -->
+
+<div >
+  
+  <div class="row">
+    <div class="col-lg-6 order-1 order-lg-2">
+      <img src="SMART-HOME.jpeg" class="img-fluid  " alt="">
+    </div>
+    <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1">
+      <h3>SMART HOME SECURITY</h3>
+      <p class="">
+        Safeguard your home with the next-generation security of EZVIZ from MOZON.
+As a global leader in smart home technology, EZVIZ harnesses the power of cloud -connected
+devices to deliver comprehensive, user
+friendly protection. Monitor your property in real time, receive instant alerts, and manage
+your home's safety from anywhere all through EZVIZ's intuitive platform.
+Leveraging cutting edge sensors and intelligent software, MOZON's EZVIZ provides the
+peace of mind and advanced capabilities you need to secure your most valuable asset.        </p>
+
+    </div>
+  </div>
+
+</div>
+<br>
+<!-- end of service 5 -->
+
+<!-- begin of service 6 -->
+
+<div >
+  
+  <div class="row">
+    <div class="col-lg-6 order-1 order-lg-2">
+      <img src="ATTENDANCE3.jpeg" class="img-fluid  " alt="">
+    </div>
+    <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1">
+      <h3>ACCESS CONTROL AND TIME ATTENDANCE</h3>
+      <p class="">
+        Safeguard your organization's most critical assets with the ZKT ECO biometric platform
+from MOZON.
+Powered by an unparalleled patent portfolio, ZKT ECO delivers the industry's most advanced
+fingerprint, iris, facial, vein, and palm print recognition. Combined with MOZON's pioneering
+computer vision innovations, ZKT ECO also enables sophisticated facial analysis, behavior
+identification, X-ray object detection, and video analytics. As the biometrics leader with
+the highest number of patents, MOZON provides the most reliable and comprehensive
+identification solutions to keep your organization secure and compliant.        </p>
+
+    </div>
+  </div>
+
+</div>
+<br>
+<!-- end of service 6 -->
+
+<!-- begin of service 7 -->
+
+<div >
+  
+  <div class="row">
+    <div class="col-lg-6 order-1 order-lg-2">
+      <img src="SWICHES.jpeg" class="img-fluid  " alt="">
+    </div>
+    <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1">
+      <h3>NETWORK SWICHES</h3>
+      <p class="">
+        Fortify your SMB's security and connectivity with UTEPO's comprehensive range of video
+surveillance and network solutions, available exclusively through MOZON.
+As a leading global provider, UTEPO empowers MOZON to deliver reliable PoE switches,
+security devices, industrial equipment, and wireless technologies tailored to the needs of
+small and medium enterprises. Partner with MOZON to access UTEPO's innovative products
+and transform the way you protect and connect your business.        </p>
+
+    </div>
+  </div>
+
+</div>
+<br>
+<!-- end of service 7 -->
+
+<!-- begin of service 8 -->
+
+<div >
+  
+  <div class="row">
+    <div class="col-lg-6 order-1 order-lg-2">
+      <img src="WEB2.jpeg" class="img-fluid  " alt="">
+    </div>
+    <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1">
+      <h3>WEBSITE DESIGN AND DEVELOPMENT</h3>
+      <p class="">
+        Amplify your SMB's digital footprint with
+MOZON's comprehensive website development
+solutions.
+As an experienced digital agency, MOZON
+delivers tailored, high-converting web platforms
+that engage your customers and propel your
+business forward. Partner with MOZON to build
+a custom, user-friendly website that showcases
+your brand and drives measurable online growth        </p>
+
+    </div>
+  </div>
+
+</div>
+<br>
+<!-- end of service 8 -->
+
+<!-- begin of service 9 -->
+
+<div >
+  
+  <div class="row">
+    <div class="col-lg-6 order-1 order-lg-2">
+      <img src="MOBILE1.jpeg" class="img-fluid  " alt="">
+    </div>
+    <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1">
+      <h3>MOBILE APP DEVELOPMENT</h3>
+      <p class="">
+        Take your SMB's digital capabilities to new heights
+with MOZON's cutting-edge mobile app development
+services.
+As an MOZON leverages the latest technologies
+and best practices to create custom, high-performing
+mobile apps that captivate your customers and
+streamline your business operations.
+Partner with MOZON to build a feature-rich,
+userfriendly mobile platform that enhances your
+brand engagement, improves customer experiences,
+and drives measurable results - all while adhering
+to your unique requirements and objectives.
+Unlock the full potential of your mobile strategy
+with MOZON's skilled team of app designers,
+developers, and digital marketers        </p>
+
+    </div>
+  </div>
+
+</div>
+<br>
+<!-- end of service 9 -->
+
+  </div>
+          </div>
+        </div>
+      </section><!-- End Call To Action Section -->
+
+  
+      <section class="call-to-action1">
+        <div id="faq" style="display: flex;">
+          
+          <div class="text-center">
+            
+          <div class="section-title">
+            <h2 >INDUSTRY SOLUTIONS</h2>
+          </div>
+    
+    <div class="container-fluid" style="display: flex;">
+    <div class="col-md-12">
+        <div class="row main">
+            <div class="wrap wrap--3 col-md-4">
+              <h6 >01. TELECOMMUNICATION SECTOR </h6>
+                <div class="container container--3 par">
+                    <p>Increasing customer usage on networks
+                        with solutions like Real-time Analytics
+                        and Data Monetization.</p>
+                </div>
+              </div>
+            
+              <div class="wrap wrap--3  col-md-4">
+                <h6>02.   GOVERNMENT SECTOR</h6>
+                <div class="container container--3 ">
+          <p>Providing secure payment solutions
+            ike Prepaid systems, QR payments, and
+            Smart POS</p>
+                </div>
+              </div>
+            
+              
+            
+        </div>
+        <div class="row main">
+            <div class="wrap wrap--2 col-md-4">
+              <h6 >03. COMMERCIAL SECTOR </h6>
+                <div class="container container--3 ">
+                    <p>Increasing customer usage on networks
+                        with solutions like Real-time Analytics
+                        and Data Monetization.</p>
+                </div>
+              </div>
+            
+              <div class="wrap wrap--2  col-md-4">
+                <h6 >04.   BANKING SECTOR</h6>
+                <div class="container container--3 ">
+          <p>Focusing on Marketing, Quality,
+            and Compliance with solutions like Digital
+            Marketing and Risk Scoring</p>
+                </div>
+              </div>
+            
+              
+            
+        </div>
+    </div>
+    </div>
+          </div>
+        </div>
+      </section><!-- End Call To Action Section -->
+      
+      <section id="team" class="team">
+  
+          <div style="text-align: center;">
+            <h2>Some of Our Clients</h2>
+          </div>
+  
+          <div class="tag-list">
+            <div class="inner">
+              <div class="tag"> <img src="catgroup-lbox-320x160-FFFFFF.webp" class="img-f" alt=""></div>
+              <div class="tag"> <img src="Nesma_Partners_Logo_RGB.png" class="img-f" alt=""></div>
+              <div class="tag"> <img src="KJO-logo.webp" class="img-f" alt=""></div>
+             
+              <div class="tag"> <img src="Bin_Quraya_Logo.png" class="img-f" alt=""></div>
+              <div class="tag"> <img src="CPP-logo-lbox-320x160-FFFFFF.webp" class="img-f" alt=""></div>
+              <div class="tag"> <img src="Tamer_Logo_FMTI_AR_RGB.png" class="img-f" alt=""></div>
+
+              <div class="fade"></div>
+            </div>
+          </div>
+      </section> 
+      
+    
+      <section id="team" class="why-us">
+
+  <div class="" >
+        <div class="section-title">
+          <h2 style="color:#fff;">Why Us</h2>
+        </div>
+<div style="color:#fff; padding-left: 4rem;">
+        <p class="" style="display: block;">
+          • Distinguished References: Our record in catering to security needs with
+years of experience and extensive know-how.           </p>
+    <p>
+      • Fostering Relationships: Building strong lasting relations with our
+      customers and partners.
+    </p>
+    <p class="">
+      • Know-How: A team of experienced, highly qualified, and regionally
+recognized technical support staff providing 7/24 support.           </p>
+<p>
+  • Solutions, Not Products: Customizing clients’ systems to distinguish real
+  threats, saving time and resources.
+</p>
+</div>
+</div>
+    </section> 
+
+    
+    <!-- ======= Contact Us Section ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="contac">
+
+        <div class="row">
+
+          <div class="col-lg-5 col-md-6">
+            <div class="contact-about">
+              <h3>Mozon company</h3>
+              <p>Delivering relevant technologies for our times</p>
+             
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="info">
+              <div>
+                <a href="https://maps.app.goo.gl/XaeKQS5ypBCivPb2A"><i class="icofont-google-map"></i></a> 
+                <p>السلام، سيهات‎ 32437
+                </p>
+              </div>
+
+              <div>
+                <a href="https//:solimanooalfotahi.sa@gmail.com"><i class="icofont-envelope"></i></a> 
+                <p>Mozon Company</p>
+              </div>
+
+
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info">
+              <div>
+                <i class="icofont-facebook"></i>
+                <p>Mozon Company</p>
+              </div>
+
+              <div>
+                <a href="https://wa.link/0qwajb"><i class="icofont-whatsapp"></i></a>
+                <p>Mozon Company</p>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    <!-- End Contact Us Section -->
+    <section class="map">
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3571.376712190361!2d50.033775999999996!3d26.475813000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjbCsDI4JzMyLjkiTiA1MMKwMDInMDEuNiJF!5e0!3m2!1sar!2ssa!4v1742411115837!5m2!1sar!2ssa" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    </div>    	</section><!-- End Map Section -->
+      
+   
+  </main>
+
+
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Mozon</span></strong>. All Rights Reserved
+      </div>
+      
+    </div>
+  </footer><!-- End #footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  </body>
+  </html>
+  
