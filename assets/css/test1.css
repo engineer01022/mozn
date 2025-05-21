@@ -38,6 +38,13 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   margin-left: 2rem;
 
 }
+.img-fluid2{
+  width :100%;
+  border-radius: 3px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+}
 h2{
   font-size: 40px;
   color:#9690a4;
@@ -48,7 +55,7 @@ h2{
 position: relative;
 overflow: hidden;
 justify-content: center;
-margin: 6rem;
+margin:3rem 0 3rem 0 ;
 
 }
 .inner{
@@ -633,7 +640,8 @@ section {
 # Call To Action
 --------------------------------------------------------------*/
 .call-to-action1 {
-  background:  url("../img/about-us.webp") fixed center center;
+  background: linear-gradient(rgba(3, 20, 62, 0.5), rgba(12, 30, 113, 0.5)), url("../img/about-us.webp") fixed center center;
+
   background-size: cover;
   padding: 60px 0;
   margin: 0px;
@@ -755,7 +763,8 @@ section {
 }
 .why-us {
   /* The image used */
-  background-image: url("../img/about-us.webp");
+  background: linear-gradient(rgba(3, 20, 62, 0.5), rgba(12, 30, 113, 0.5)), url("../img/about-us.webp") fixed center center;
+
   
   /* Set a specific height */
   min-height: 350px;
@@ -1050,3 +1059,9 @@ section {
   color: #fff;
 }
 
+.container--3{
+}
+@media(max-width:767px){
+ 
+  
+}
